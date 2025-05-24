@@ -1,0 +1,2 @@
+dragonfly-core>=1.65.3
+honeybee-idaice==1.2.0
