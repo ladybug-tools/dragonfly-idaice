@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>dragonfly_idaice.writer module &#8212; dragonfly-idaice  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css?v=0bf093e7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=0b9525ea" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="dragonfly_idaice.properties.model module" href="dragonfly_idaice.properties.model.html" />
+<link rel="icon" type="image/x-icon" href="https://github.com/ladybug-tools/artwork/raw/refs/heads/master/icons_bugs/ico/dragonfly.ico">
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          dragonfly-idaice</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="cli/index.html">CLI Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cli/index.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli/index.html#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cli/translate.html">translate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cli/translate.html#dragonfly-idaice-translate">dragonfly-idaice translate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="cli/translate.html#dragonfly-idaice-translate-model-to-idm">model-to-idm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="dragonfly_idaice.html">dragonfly_idaice package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dragonfly_idaice.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_idaice.cli.html">dragonfly_idaice.cli package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_idaice.cli.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_idaice.cli.translate.html">dragonfly_idaice.cli.translate module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_idaice.cli.translate.html#dragonfly_idaice.cli.translate.model_to_idm"><code class="docutils literal notranslate"><span class="pre">model_to_idm()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_idaice.cli.html#module-dragonfly_idaice.cli">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_idaice.properties.html">dragonfly_idaice.properties package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_idaice.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_idaice.properties.model.html">dragonfly_idaice.properties.model module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_idaice.properties.model.html#dragonfly_idaice.properties.model.ModelIdaiceProperties"><code class="docutils literal notranslate"><span class="pre">ModelIdaiceProperties</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="dragonfly_idaice.properties.model.html#dragonfly_idaice.properties.model.ModelIdaiceProperties.ToString"><code class="docutils literal notranslate"><span class="pre">ToString()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="dragonfly_idaice.properties.model.html#dragonfly_idaice.properties.model.ModelIdaiceProperties.apply_properties_from_dict"><code class="docutils literal notranslate"><span class="pre">apply_properties_from_dict()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="dragonfly_idaice.properties.model.html#dragonfly_idaice.properties.model.ModelIdaiceProperties.check_for_extension"><code class="docutils literal notranslate"><span class="pre">check_for_extension()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="dragonfly_idaice.properties.model.html#dragonfly_idaice.properties.model.ModelIdaiceProperties.to_dict"><code class="docutils literal notranslate"><span class="pre">to_dict()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="dragonfly_idaice.properties.model.html#dragonfly_idaice.properties.model.ModelIdaiceProperties.host"><code class="docutils literal notranslate"><span class="pre">host</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_idaice.properties.html#module-dragonfly_idaice.properties">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="dragonfly_idaice.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">dragonfly_idaice.writer module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dragonfly_idaice.writer.model_to_idm"><code class="docutils literal notranslate"><span class="pre">model_to_idm()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dragonfly_idaice.html#module-dragonfly_idaice">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="cli/index.html">CLI Docs</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="dragonfly_idaice.html">dragonfly_idaice package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dragonfly_idaice.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="dragonfly_idaice.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">dragonfly_idaice.writer module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dragonfly_idaice.writer.model_to_idm"><code class="docutils literal notranslate"><span class="pre">model_to_idm()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dragonfly_idaice.html#module-dragonfly_idaice">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="dragonfly_idaice.properties.model.html" title="Previous Chapter: dragonfly_idaice.properties.model module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; dragonfly_ida...</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/dragonfly_idaice.writer.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li class="toctree-l1"><a class="reference internal" href="cli/index.html">CLI Docs</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="dragonfly_idaice.html">dragonfly_idaice package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dragonfly_idaice.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="dragonfly_idaice.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">dragonfly_idaice.writer module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dragonfly_idaice.writer.model_to_idm"><code class="docutils literal notranslate"><span class="pre">model_to_idm()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dragonfly_idaice.html#module-dragonfly_idaice">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-8 content" role="main">
+      
+  <section id="module-dragonfly_idaice.writer">
+<span id="dragonfly-idaice-writer-module"></span><h1>dragonfly_idaice.writer module<a class="headerlink" href="#module-dragonfly_idaice.writer" title="Link to this heading">¶</a></h1>
+<p>Write a IDM file from a Dragonfly model.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="dragonfly_idaice.writer.model_to_idm">
+<span class="sig-prename descclassname"><span class="pre">dragonfly_idaice.writer.</span></span><span class="sig-name descname"><span class="pre">model_to_idm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_plenums</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_int_wall_thickness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_adjacent_sub_face_dist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_idaice/writer.html#model_to_idm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dragonfly_idaice.writer.model_to_idm" title="Link to this definition">¶</a></dt>
+<dd><p>Generate an IDA-ICE IDM string from a Dragonfly Model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – A dragonfly Model.</p></li>
+<li><p><strong>name</strong> – Output IDM file name. If None, the Model display name will be used.</p></li>
+<li><p><strong>folder</strong> – A text string for the directory where the DFJSON will be written.
+If unspecified, the default simulation folder will be used. This
+is usually at “C:UsersUSERNAMEsimulation” on Windows.</p></li>
+<li><p><strong>use_multiplier</strong> – Boolean to note whether the multipliers on each Building
+story will be passed along to the Room objects or if full geometry
+objects should be written for each repeated story in the
+building. (Default: True).</p></li>
+<li><p><strong>exclude_plenums</strong> – Boolean to indicate whether ceiling/floor plenum depths
+assigned to Room2Ds should generate distinct 3D Rooms in the
+translation. (Default: False).</p></li>
+<li><p><strong>max_int_wall_thickness</strong> – Maximum thickness of the interior wall in meters. IDA-ICE
+expects the input model to have a gap between the rooms that represents
+the wall thickness. This value must be smaller than the smallest Room
+that is expected in resulting IDA-ICE model and it should never be greater
+than 0.5 in order to avoid creating invalid building bodies for IDA-ICE.
+For models where the walls are touching each other, use a value
+of 0. (Default: 0.40).</p></li>
+<li><p><strong>max_adjacent_sub_face_dist</strong> – The maximum distance in meters between interior
+Apertures and Doors at which they are considered adjacent. This is used to
+ensure that only one interior Aperture of an adjacent pair is written into
+the IDM. This value should typically be around the max_int_wall_thickness
+and should ideally not be thicker than 0.5. But it may be undesirable to
+set this to zero (like some cases of max_int_wall_thickness),
+particularly when the adjacent interior geometries are not matching
+one another. (Default: 0.40).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Path to exported IDM file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

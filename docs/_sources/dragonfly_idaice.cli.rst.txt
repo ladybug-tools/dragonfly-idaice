@@ -1,0 +1,18 @@
+dragonfly\_idaice.cli package
+=============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   dragonfly_idaice.cli.translate
+
+Module contents
+---------------
+
+.. automodule:: dragonfly_idaice.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:

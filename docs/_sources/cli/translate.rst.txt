@@ -1,0 +1,6 @@
+translate
+=========
+
+.. click:: dragonfly_idaice.cli.translate:translate
+   :prog: dragonfly-idaice translate
+   :show-nested:
