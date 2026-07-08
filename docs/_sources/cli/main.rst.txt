@@ -1,0 +1,7 @@
+main
+====
+
+.. click:: dragonfly_idaice.cli.__init__:idaice
+   :prog: dragonfly-idaice
+   :show-nested:
+   :commands: 
