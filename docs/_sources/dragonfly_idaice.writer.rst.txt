@@ -1,0 +1,7 @@
+dragonfly\_idaice.writer module
+===============================
+
+.. automodule:: dragonfly_idaice.writer
+   :members:
+   :undoc-members:
+   :show-inheritance:

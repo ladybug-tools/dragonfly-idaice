@@ -1,0 +1,7 @@
+dragonfly\_idaice.properties.model module
+=========================================
+
+.. automodule:: dragonfly_idaice.properties.model
+   :members:
+   :undoc-members:
+   :show-inheritance:
