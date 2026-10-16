@@ -45,7 +45,10 @@ def model_to_idm(model, name=None, folder=None,
     """
     hb_model = model.to_honeybee(
         'District', use_multiplier=use_multiplier, exclude_plenums=exclude_plenums,
-        solve_ceiling_adjacencies=False, enforce_adj=False, enforce_solid=True)[0]
+        solve_ceiling_adjacencies=False, enforce_adj=False, enforce_solid=True,
+        face_rename_format='{parent.display_name} - {type} - {cardinal_direction}',
+        subface_rename_format='{parent.display_name} - {gbxml_type} - {cardinal_direction}'
+    )[0]
     folder = folder if folder is not None else folders.default_simulation_folder
     return hb_model_to_idm(
         hb_model, folder, name,
