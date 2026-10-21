@@ -3,6 +3,7 @@
 from __future__ import division
 
 from honeybee.config import folders
+from honeybee.typing import readable_short_name
 from honeybee_idaice.writer import model_to_idm as hb_model_to_idm
 
 
@@ -43,10 +44,18 @@ def model_to_idm(model, name=None, folder=None,
     Returns:
         Path to exported IDM file.
     """
+    # ensure the model is in meters and no room names are longer than 30 characters
+    model = model.duplicate()
+    if model.units != 'Meters':
+        model.convert_to_units('Meters')
+    for room in model.room_2ds:
+        room.display_name = readable_short_name(room.display_name)
+    # translate to honeybee using appropriate renaming conventions
     hb_model = model.to_honeybee(
         'District', use_multiplier=use_multiplier, exclude_plenums=exclude_plenums,
         solve_ceiling_adjacencies=False, enforce_adj=False, enforce_solid=True,
-        face_rename_format='{parent.display_name} - {type} - {cardinal_direction}'
+        face_rename_format='{parent.display_name} - {type} - {cardinal_abbrev}',
+        subface_rename_format='{type}'
     )[0]
     folder = folder if folder is not None else folders.default_simulation_folder
     return hb_model_to_idm(
