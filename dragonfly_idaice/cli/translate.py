@@ -7,6 +7,7 @@ import base64
 import tempfile
 import uuid
 
+from ladybug.projectinfo import ProjectInfo
 from honeybee.units import parse_distance_string
 from dragonfly.model import Model
 
@@ -181,7 +182,8 @@ def model_to_idm(
     # convert distance strings to floats
     wall_thickness = parse_distance_string(str(wall_thickness), 'Meters')
     adjacency_distance = parse_distance_string(str(adjacency_distance), 'Meters')
-    north_angle = 0 if project_info is None else project_info.north_angle
+    if project_info is not None:
+        project_info = ProjectInfo.from_json(project_info)
 
     # translate the Model to IDM
     model = Model.from_file(model_file)
