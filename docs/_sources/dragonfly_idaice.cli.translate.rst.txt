@@ -1,0 +1,7 @@
+dragonfly\_idaice.cli.translate module
+======================================
+
+.. automodule:: dragonfly_idaice.cli.translate
+   :members:
+   :undoc-members:
+   :show-inheritance:

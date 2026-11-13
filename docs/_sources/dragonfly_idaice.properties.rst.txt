@@ -1,0 +1,18 @@
+dragonfly\_idaice.properties package
+====================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   dragonfly_idaice.properties.model
+
+Module contents
+---------------
+
+.. automodule:: dragonfly_idaice.properties
+   :members:
+   :undoc-members:
+   :show-inheritance:
