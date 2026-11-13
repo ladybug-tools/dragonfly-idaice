@@ -8,9 +8,14 @@ from dragonfly_idaice.cli.translate import model_to_idm_cli
 def test_df_model_to_idm():
     runner = CliRunner()
     input_df_model = './tests/assets/simple_model.dfjson'
+    project_info = './tests/assets/project_info.json'
     output_idm = './tests/assets/simple_model.idm'
 
-    in_args = [input_df_model, '--wall-thickness', '0', '--output-file', output_idm]
+    in_args = [
+        input_df_model, '--wall-thickness', '0',
+        '--project-info', project_info,
+        '--output-file', output_idm
+    ]
     result = runner.invoke(model_to_idm_cli, in_args)
     assert result.exit_code == 0
     assert os.path.isfile(output_idm)
